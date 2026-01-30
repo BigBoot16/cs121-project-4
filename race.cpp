@@ -13,8 +13,13 @@ int main() {
 		for(int i=0; i<5; i++) {
 			advance(i, horses);
 			printLane(i, horses);
-			keepGoing = isWinner(i, horses);
+			if(keepGoing) {
+				keepGoing = isWinner(i, horses);
+			}
 		}
+		std::cout << "Press ENTER for next round:";
+		std::string temp;
+		std::cin.ignore();
 	}
 }
 
